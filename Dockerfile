@@ -44,6 +44,9 @@ RUN apt-get update && apt-get install -y \
       sf \
       raster \
       scales \
+      mapview \
+      citr \
+      gstat \
    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
    && rm -rf /var/lib/apt/lists/*
 
