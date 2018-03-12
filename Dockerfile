@@ -49,6 +49,7 @@ RUN apt-get update && apt-get install -y \
       gstat \
       spData \
       leaflet\
+      polynom\
    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
    && rm -rf /var/lib/apt/lists/* \
    && installGithub.r Nowosad/spDataLarge \
