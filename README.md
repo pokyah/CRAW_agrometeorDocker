@@ -41,7 +41,7 @@ $ sudo ln -sf /location/of/docker-run-agrometeor.sh ~/.local/bin/dagrometeor
 
 ## Start it at boot
 
-you need to execute the `dagrometeor` command as root userat boot without typing password. For this, edit `/etc/local.rc` :
+you need to execute the `dagrometeor` command [as root user at boot](https://askubuntu.com/questions/956237/run-terminal-sudo-command-at-startup) without typing password. For this, edit `/etc/local.rc` :
 
 
 ```bash
