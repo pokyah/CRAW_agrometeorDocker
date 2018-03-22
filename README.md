@@ -13,15 +13,15 @@ $ docker pull pokyah/agrometeordocker
 ### Make the `docker-run-agrometeor.sh` executable :
 
 ```bash
-chmod a+x docker-run-agrometeor.sh
+$ chmod a+x docker-run-agrometeor.sh
 ```
 
 ### Make a symbolic link
 
-* Create a folder `.local/bin` in your home directory
+Create a folder `.local/bin` in your home directory
 
 ```bash
-mkdri `~/.local/bin
+$ mkdir `~/.local/bin
 ```
 
 ### Set PATH so it includes user's private ./local/bin if it exists
@@ -36,5 +36,19 @@ fi
 make a simlink to the `docker-run-agrometeor.sh` in your `~/.local/bin/` folder that allow to launch it using the simple command `dagrometeor` :
 
 ```bash
-sudo ln -sf /location/of/docker-run-agrometeor.sh ~/.local/bin/dagrometeor
+$ sudo ln -sf /location/of/docker-run-agrometeor.sh ~/.local/bin/dagrometeor
 ```
+
+## Start it at boot
+
+you need to execute the `dagrometeor` command as root userat boot without typing password. For this, edit `/etc/local.rc` :
+
+
+```bash
+$ cd /etc
+$ sudo nano local.rc
+```
+
+by pasting `dagrometeor` right before the line `exit0` and by making the `rc.local` file executable : 
+
+`sudo chmod +x /etc/rc.local`
