@@ -10,7 +10,11 @@ $ docker pull pokyah/agrometeordocker
 
 ## Run the container 
 
-You can run it with a simple bash command available in this repo. Once the command is executed, open your web browser and go at http://localhost:8787. This URL will launch Rstudio. The first time you open it, you will be prompted for a login and password. The container uses the defaults settings of the [rocker/rstudio](https://hub.docker.com/r/rocker/rstudio/) image. Log in with username:password as rstudio:rstudio
+You can run it with the `docker-run-agrometeor.sh` bash command available in this repo. Once the command is executed, open your web browser and go at http://localhost:8787. This URL will launch Rstudio. The first time you open it, you will be prompted for a login and password. The container uses the defaults settings of the [rocker/rstudio](https://hub.docker.com/r/rocker/rstudio/) image. Log in with username:password as rstudio:rstudio.
+
+__Extra__  
+
+You can make your Rstudio-docker instance behave like a native app. If you are using Chromium/Chrome, open http://localhost:8787, click on the 3 stacked dots icon, and choose *More tool > Add to desktop*. Rstudio will be available as a native app that integrates perfectly with your desktop environment (only tested under Gnome)
 
 ### Make the `docker-run-agrometeor.sh` executable :
 
