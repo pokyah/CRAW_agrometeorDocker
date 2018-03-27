@@ -8,7 +8,9 @@ built from rocker/tidyverse
 $ docker pull pokyah/agrometeordocker
 ```
 
-## To run the container with a simple bash command
+## Run the container 
+
+You can run it with a simple bash command available in this repo. Once the command is executed, open your web browser and go at http://localhost:8787. This URL will launch Rstudio. The first time you open it, you will be prompted for a login and password. The container uses the defaults settings of the [rocker/rstudio](https://hub.docker.com/r/rocker/rstudio/) image. Log in with username:password as rstudio:rstudio
 
 ### Make the `docker-run-agrometeor.sh` executable :
 
@@ -52,3 +54,5 @@ $ sudo nano local.rc
 by pasting `dagrometeor` right before the line `exit0` and by making the `rc.local` file executable : 
 
 `sudo chmod +x /etc/rc.local`
+
+
