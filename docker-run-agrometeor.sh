@@ -4,4 +4,4 @@ myip=$(ip a | grep enp0s31f6$ | grep -oE '((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.
 
 # sudo docker run -w /home/rstudio/ --add-host=database:$myip --rm -p 8787:8787 -v /home/tgoossens/Documents/code/:/home/rstudio/ pokyah/agrometeordocker
 
-sudo docker run -w /home/rstudio/ --rm -p 8787:8787 -v /home/tgoossens/Documents/agrometDev/:/home/rstudio/ pokyah/agrometeordocker
+sudo docker run -w /home/rstudio/ --rm -p 8787:8787 -v /home/tgoossens/Documents/code/:/home/rstudio/ pokyah/agrometeordocker
