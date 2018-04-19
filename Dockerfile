@@ -2,10 +2,18 @@
 FROM rocker/tidyverse:latest
 
 # provide information about the maintainer of the image
-MAINTAINER Thomas Goossens (t.goossens@cra.wallonie.be)
+MAINTAINER Thomas Goossens (hello.pokyah@gmail.com)
+
+# Download and install hugo blog to work with R blogdown
+ENV HUGO_VERSION 0.22.1
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.deb
+ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} /tmp/hugo.deb
+RUN dpkg -i /tmp/hugo.deb \
+	&& rm /tmp/hugo.deb
 
 # We need to install all the UBUNTU dependencies required for our R-packages to work properly
 RUN apt-get update && apt-get install -y \
+    openssh-server \
     libxml2-dev \
     libssl-dev \
     libcurl4-openssl-dev \
@@ -49,13 +57,14 @@ RUN apt-get update && apt-get install -y \
       gstat \
       spData \
       shiny \
-      shinycssloader \
+      blogdown \
       RColorBrewer \
       mlr \
    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
    && rm -rf /var/lib/apt/lists/* \
    && installGithub.r Nowosad/spDataLarge \
    && rm -rf /tmp/downloaded_packages/
+
 
  
 
