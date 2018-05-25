@@ -67,6 +67,10 @@ by pasting `dagrometeor` right before the line `exit0` and by making the `rc.loc
 
 If you are using Chromium/Chrome, open http://localhost:8787, click on the 3 stacked dots icon, and choose *More tool > Add to desktop*. Rstudio will be available as a native app that integrates perfectly with your desktop environment (only tested under Gnome).
 
+### first login to rstudio containerised : 
+
+user : `rstudio`
+password : `rstudio`
 
 
 
