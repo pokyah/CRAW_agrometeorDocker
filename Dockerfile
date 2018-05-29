@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     freeglut3 \
     freeglut3-dev \
     mesa-common-dev \
+    r-cran-rjava \
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
@@ -59,6 +60,9 @@ RUN apt-get update && apt-get install -y \
       shiny \
       blogdown \
       RColorBrewer \
+      revealjs \
+      rJava \
+      RWekajars \
       mlr \
    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
    && rm -rf /var/lib/apt/lists/* \
