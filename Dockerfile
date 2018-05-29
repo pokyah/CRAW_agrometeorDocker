@@ -67,7 +67,9 @@ RUN apt-get update && apt-get install -y \
    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
    && rm -rf /var/lib/apt/lists/* \
    && installGithub.r Nowosad/spDataLarge \
-   && rm -rf /tmp/downloaded_packages/
+   && rm -rf /tmp/downloaded_packages
+
+   RUN R -e 'devtools::install_github("mlr-org/shinyMlr/package")'
 
 
  
