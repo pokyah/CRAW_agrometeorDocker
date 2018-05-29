@@ -26,10 +26,12 @@ RUN apt-get update && apt-get install -y \
     freeglut3 \
     freeglut3-dev \
     mesa-common-dev \
+    default-jdk \
     r-cran-rjava \
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
+    && R CMD javareconf \
     && install2.r --error \
       pacman \
       lubridate \ 
@@ -69,7 +71,7 @@ RUN apt-get update && apt-get install -y \
    && installGithub.r Nowosad/spDataLarge \
    && rm -rf /tmp/downloaded_packages
 
-   RUN R -e 'devtools::install_github("mlr-org/shinyMlr/package")'
+RUN R -e 'devtools::install_github("mlr-org/shinyMlr/package")'
 
 
  
