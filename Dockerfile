@@ -16,6 +16,7 @@ RUN apt-get update \
     && apt-get install -y software-properties-common \
     && apt-get update -q \
     && apt-get install -y \
+      texlive-full \
       jq \
       libjq-dev \
       libv8-3.14-dev \
