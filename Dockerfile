@@ -1,5 +1,5 @@
 # We build our custom image from the existing rocker/tidyverse image which is an R install within an UBUNTU Linux.
-FROM rocker/tidyverse:latest
+FROM rocker/tidyverse:3.4.4
 
 # provide information about the maintainer of the image
 MAINTAINER Thomas Goossens (hello.pokyah@gmail.com)
@@ -43,6 +43,7 @@ RUN apt-get update \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
     && R CMD javareconf \
     && install2.r --error \
+      rvest \
       pacman \
       lubridate \ 
       anytime \
