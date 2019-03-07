@@ -38,6 +38,7 @@ RUN apt-get update \
       mesa-common-dev \
       default-jdk \
       r-cran-rjava \
+      libmagick++-dev \
     && apt-get clean \ 
     && rm -rf /var/lib/apt/lists/ \ 
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
@@ -64,7 +65,6 @@ RUN apt-get update \
       ggpubr \
       BlandAltmanLeh \
       sf \
-      ggmap \
       raster \
       scales \
       mapview \
@@ -78,17 +78,11 @@ RUN apt-get update \
       rJava \
       RWekajars \
       mlr \
+      tmap \
    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
    && rm -rf /var/lib/apt/lists/* \
    && installGithub.r Nowosad/spDataLarge \
-   && installGithub.r mlr-org/shinyMlr/package \
-   && installGithub.r tidyverse/rlang \
-   && installGithub.r pokyah/agrometAPI \
+   && installGithub.r r-lib/rlang \
+   && installGithub.r tidyverse/ggplot2 \
    && rm -rf /tmp/downloaded_packages
-
-
-
- 
-
-
 
